@@ -25,6 +25,13 @@ object FirstApp{
     //fizzbuzz
     val fizzbuzz = new Fizzbuzz
     fizzbuzz.fb2
+    println("====")
+
+    //階乗
+    val factorial = new Factorial
+    val result = factorial.calcFactorial(4)
+    println(result)
+    println("====")
 
   }
 }
@@ -39,6 +46,10 @@ class Calc{
   }
 }
 
+/*
+ * Fizzbuzz
+ * mapとかcaseとか
+ */
 class Fizzbuzz{
   def fb1 {
     1 to 20 map{
@@ -58,7 +69,15 @@ class Fizzbuzz{
       println(e)
     }
   }
+}
 
-
-
+/*
+ * 階乗計算class
+ * 再帰
+ */
+class Factorial{
+  def calcFactorial(i:Int,result:Int=1):Int = {
+    if (i == 0) result
+    else calcFactorial(i-1 , i*result)
+  }
 }

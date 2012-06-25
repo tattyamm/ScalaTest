@@ -74,6 +74,9 @@ class Fizzbuzz{
 /*
  * 階乗計算class
  * 再帰
+ * 
+ * 『常に戻り値の型を省略できるとは限りません。例えば、再帰呼び出しされるメソッドでは戻り値の型を省略できません。』
+ * http://d.hatena.ne.jp/seratch2/20111103/1320334000
  */
 class Factorial{
   def calcFactorial(i:Int,result:Int=1):Int = {
